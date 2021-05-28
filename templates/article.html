@@ -1,0 +1,48 @@
+{% extends 'layout.html' %} 
+
+    {% block body %} 
+    <div class="jumbotron">
+        <h1 class="display-4">ARTICLE</h1>
+        <table>
+          <thead>
+            
+
+                  <th>ID</th>
+                  <th>TITLE</th>
+                  <th>AUTHOR</th>
+                  <th>DATE</th>
+                  <th>EDIT</th>
+              </tr>
+          </thead>
+          <tbody>
+            {% for article in articles %}
+            <tr>
+              <td>{{article['id']}}</td>
+              <td>{{article['title']}}</td>
+              
+              <td>{{article['author']}}</td>
+              <td>{{article['create_date']}}</td>
+              <td><a class="btn btn-warning " href="#" role="button">EDIT</a></td>
+              <td><a class="btn btn-danger " href="#" role="button">DELET</a></td>
+
+            </tr>
+            {% endfor %}
+              
+          </tbody>
+          <tfoot>
+              <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                
+                <th>AUTHOR</th>
+                <th>DATE</th>
+                <th>EDIT</th>
+              </tr>
+          </tfoot>
+    </table>
+        
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+    {% endblock %} 
+
+
